@@ -85,9 +85,16 @@
         }
         .servicesContain {
             display:flex;
-            flex-direction: column;
             text-align: left;
             border-bottom: 1px solid black;
+        }
+        .servicesContain h4 {
+            width:40%;
+        }
+        .servicesContain p {
+            
+            width:60%;
+            
         }
         .contain a {
             text-decoration: none;
@@ -139,9 +146,9 @@
             </div>
         </div>
         <div class="contain2" id="contact">
-            <form onsubmit="sendEmail(); reset();return false;">      
+            <form>      
                 <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-                <input name="email" type="text" class="feedback-input" placeholder="Email" id="email" />
+                <input name="email" type="text" class="feedback-input" placeholder="Email" />
                 <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
                 <input type="submit" value="SUBMIT"/>
             </form>
@@ -149,7 +156,6 @@
         
     </main>
     <footer></footer>
-    <script>src="https://smtpjs.com/v3/smtp.js"</script>
     <script>
         let temp=document.getElementsByClassName("temp");
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -160,19 +166,6 @@
                 });
             });
         });
-        function sendEmail() {
-            Email.send({
-                Host : "smtp.gmail.com",
-                Username : "steven.hai.ta856@gmail.com",
-                Password : "0917152452",
-                To : 'steven.hai.ta866@gmail.com',
-                From : document.getElementById("email").value,
-                Subject : "This is the subject",
-                Body : "And this is the body"
-            }).then(
-                message => alert(message)
-            );
-        }
     </script>
 </body>
 </html>
