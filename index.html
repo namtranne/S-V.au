@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="./switch.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <style>
         * {
@@ -80,6 +81,7 @@
             margin-bottom: 20px;
         }
         .services {
+            color:white;
             width:100%;
             padding:10px;
             display:flex;
@@ -88,7 +90,7 @@
             height:calc(100vh - 100px);
         }
         .services .title {
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid white;
             height:20%;
             display:flex;
             align-items: center;
@@ -98,7 +100,7 @@
         .servicesContain {
             display:flex;
             text-align: left;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid white;
             height:40%;
             align-items: center;
         }
@@ -115,7 +117,7 @@
             color:white;
         }
         .contain2 {
-            background:white;
+            background:#1E314F;
             padding:10px;
             scroll-margin-top:100px;
         }
@@ -241,10 +243,22 @@
             <img src="images/SV logo_No Background.png">
         </div>
         <div class="contain">
-            <label class="switch">
-                <input type="checkbox" checked>
-                <span class="slider round"></span>
-              </label>
+            <div class="toggleWrapper">
+                <input type="checkbox" class="dn" id="dn"/>
+                <label for="dn" class="toggle">
+                  <span class="toggle__handler">
+                    <span class="crater crater--1"></span>
+                    <span class="crater crater--2"></span>
+                    <span class="crater crater--3"></span>
+                  </span>
+                  <span class="star star--1"></span>
+                  <span class="star star--2"></span>
+                  <span class="star star--3"></span>
+                  <span class="star star--4"></span>
+                  <span class="star star--5"></span>
+                  <span class="star star--6"></span>
+                </label>
+              </div>
             <a href="#aboutUs">About Us</a>
             <a href="#services" class="anchor">Services</a>
             <a href="#contact">Contact</a>
@@ -284,7 +298,7 @@
     </main>
     <footer>
         <div class="title">
-            <h2>Leave your message here</h2>
+            <h2 style="color:white">Leave your message here</h2>
         </div>
         <div class="contain2" id="contact">
             <form action="https://formsubmit.co/ab516aede1f23f6ee50d2be7d6f94a0f" method="POST" >
@@ -312,7 +326,7 @@
             <ul>
                 <li><h4 style="color:white">Contact Information:</h4></li>
                 <li> <a href="mailto:steven@svass.com.au">Email: steven@svass.com.au</a></li>
-                <li><a href="tel:0423040573">Phone number: 0423040573</a></li>
+                <li><a href="tel:0423040573">Phone: 0423040573</a></li>
             </ul>
         </div>
         <div class="social">
@@ -339,6 +353,7 @@
         
        </div>
     </footer>
+    <script  src="./script.js"></script>
 </body>
     <script>
         let temp=document.getElementsByClassName("temp");
@@ -350,6 +365,14 @@
                 });
             });
         });
+        $('.cb-value').click(function() {
+            var mainParent = $(this).parent('.toggle-btn');
+            if($(mainParent).find('input.cb-value').is(':checked')) {
+                $(mainParent).addClass('active');
+            } else {
+                $(mainParent).removeClass('active');
+            }
+        })
     </script>
 </body>
 </html>
