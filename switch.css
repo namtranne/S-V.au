@@ -36,7 +36,7 @@
   }
   
   input:checked + .slider {
-    background-image: src="https://cdn-icons-png.flaticon.com/512/323/323319.png";
+    background-image: url("./images/English-icon.png");
   }
   
   input:focus + .slider {
