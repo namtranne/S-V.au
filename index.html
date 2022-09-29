@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./switch.css">
     <title>Document</title>
     <style>
         * {
@@ -12,13 +14,16 @@
             padding:0;
             box-sizing: border-box;
         }
+        a {
+            text-decoration: none;
+            color:white;
+        }
         body {
-            height:200vh;
             font-family: Arial,Helvetica,sans-serif;
         }
         header {
             height: 100px;
-            background:black;
+            background:#1565c0;
             display:flex;
             justify-content:space-between;
             padding: 0px 20px 0px 0px;
@@ -31,6 +36,7 @@
         }
         header img {
             height:100px;
+            background:white;
         }
         header .contain {
             color:white;
@@ -41,7 +47,6 @@
             width:300px;
         }
         main {
-            height:1000px;
             text-align: center;
             padding-top:100px;
         }
@@ -61,11 +66,13 @@
             flex-direction: column;
             align-items:center;
             z-index: 2;
-            background:rgb(61, 61, 61);
+            background:#e8f5e9;
+            padding-top:20px;
+            height:calc(100vh - 100px);
         }
         .aboutUs {
             width:80%;
-            height:300px;
+            height:70%;
             border:1px solid black;
             margin-top:30px;
             padding:20px;
@@ -76,17 +83,24 @@
             width:100%;
             padding:10px;
             display:flex;
-            justify-content:space-between;
             flex-direction: column;
             scroll-margin-top: 100px;
+            height:calc(100vh - 100px);
         }
         .services .title {
             border-bottom: 1px solid black;
+            height:20%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            width:100%;
         }
         .servicesContain {
             display:flex;
             text-align: left;
             border-bottom: 1px solid black;
+            height:40%;
+            align-items: center;
         }
         .servicesContain h4 {
             width:40%;
@@ -101,11 +115,124 @@
             color:white;
         }
         .contain2 {
-            background:rgb(61, 61, 61);
+            background:white;
             padding:10px;
             scroll-margin-top:100px;
         }
-
+        footer {
+            border:1px solid black;
+            height:calc(100vh - 100px);
+        }
+        .map {
+            height:calc(100vh - 100px);
+            position: relative;
+            background:#e8f5e9;
+        }
+        .map .title {
+            height:20%;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+        }
+        #map {
+            width:60%;
+            height:60%;
+            position:absolute;
+            top:20%;
+            left:20%;
+        }
+        footer .title {
+            width:100%;
+            display:flex;
+            justify-content:center;
+            height: 10%;
+            align-items: center;
+        }
+        footer .bottom {
+            height:30%;
+            background:black;
+            padding:20px;
+            display:flex;
+        }
+        .bottom .taxAgent {
+            height:40%;
+            width:fit-content;
+        }
+        .bottom .taxAgent img {
+            height:100%;
+            background:white;
+            border-radius: 50%;
+        }
+        .bottom .xero {
+            height:40%;
+            width:fit-content;
+        }
+        .bottom .xero img {
+            height:100%;
+        }
+        .logo {
+            height:100%;
+            display:flex;
+            flex-direction: column;
+            justify-content:space-around;
+            width:33%;
+            align-items: center;
+        }
+        .contactInfo {
+            height:100%;
+            width:33%;
+            display:flex;
+            align-items:center;
+            flex-direction: column;
+            flex-direction: space-around;
+        }
+        .contactInfo h4 {
+            height:20%;
+        }
+        .contactInfo ul {
+            height:80%;
+        }
+        .contactInfo ul li {
+            margin-bottom:8px;
+        }
+        .icon {
+            width:48px;
+            height:48px;
+            border-radius:50%;
+            background-color:#777;
+            margin:4px;
+            overflow: hidden;
+            position: relative;
+        }
+        .icon i{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            z-index: 1;
+        }
+        .icon::before {
+            border-radius:50%;
+            content:"";
+            display:block;
+            width:48px;
+            height:48px;
+            position: absolute;
+            background-color:grey;
+        }
+        .icon:hover::before {
+            background-color:#2d3436;
+        }
+        #iconsList {
+            display:flex;
+            justify-content:space-between;
+        }
+        .icon a {
+            color:black;
+        }
     </style>
 </head>
 <body id="aboutUs">
@@ -114,10 +241,13 @@
             <img src="images/SV logo_No Background.png">
         </div>
         <div class="contain">
-            <a href="#aboutUs">AboutUs</a>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+              </label>
+            <a href="#aboutUs">About Us</a>
             <a href="#services" class="anchor">Services</a>
             <a href="#contact">Contact</a>
-
         </div>
     </header>
     <main>
@@ -134,7 +264,7 @@
         </div>
         <div class="services" id="services">
             <div class="title">
-                <h3>OUR SERVICES</h3>
+                <h2>OUR SERVICES</h2>
             </div>
             <div class="servicesContain">
                 <h4>Individuals</h4>
@@ -145,18 +275,71 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quas quod dolor temporibus, odio officiis optio id quia magnam sed iure? Non, placeat. Laborum veniam ipsam mollitia sint. Voluptates, quis!</p>
             </div>
         </div>
+        <div class="map">
+            <div class="title">
+                <h2>Our location</h2>
+            </div>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.0519472344376!2d145.77502771504132!3d-16.922729588358642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x697866925238939f%3A0xd427e65189886ced!2sOrchid%20Plaza%20Shopping%20Centre!5e0!3m2!1sen!2s!4v1664431906621!5m2!1sen!2s" style="border:none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+    <footer>
+        <div class="title">
+            <h2>Leave your message here</h2>
+        </div>
         <div class="contain2" id="contact">
             <form action="https://formsubmit.co/ab516aede1f23f6ee50d2be7d6f94a0f" method="POST" >
                 <input type="hidden" name="_captcha" value="false">
-                <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-                <input name="email" type="text" class="feedback-input" placeholder="Email" />
-                <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+                <input name="First Name" type="text" class="feedback-input" placeholder="First Name" />   
+                <input name="Last Name" type="text" class="feedback-input" placeholder="Last Name" />   
+                <input name="Email" type="text" class="feedback-input" placeholder="Email" />
+                <textarea name="Message" class="feedback-input" placeholder="Your message"></textarea>
                 <input type="submit" value="SUBMIT"/>
             </form>
         </div>
         
-    </main>
-    <footer></footer>
+        
+        
+       <div class="bottom">
+        <div class="logo">
+            <div class="taxAgent">
+                <img src="./images/tax-agent.png" alt="">
+             </div>
+             <div class="xero">
+                <img src="./images/xero-certified-advisor-logo-hires-RGB-e1541376639280-768x376.png" alt="">
+             </div>
+        </div>
+        <div class="contactInfo">
+            <ul>
+                <li><h4 style="color:white">Contact Information:</h4></li>
+                <li> <a href="mailto:steven@svass.com.au">Email: steven@svass.com.au</a></li>
+                <li><a href="tel:0423040573">Phone number: 0423040573</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <ul class="icons">
+                <li class="title"><h4 style="color:white">Social Media:</h4></li>
+                <li>
+                    <ul id="iconsList">
+                        <li class="icon">
+                            <a href="https://www.facebook.com/SnV.CAIRNS.ACCOUNTANT"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li class="icon">
+                            <a href="https://www.tiktok.com/@steventa888?lang=vi-VN"><i class="fa-brands fa-tiktok"></i></a>
+                        </li>
+                        <li class="icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </li>
+                        <li class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+       </div>
+    </footer>
+</body>
     <script>
         let temp=document.getElementsByClassName("temp");
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
