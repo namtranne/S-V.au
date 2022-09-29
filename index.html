@@ -247,7 +247,7 @@
         }
     </style>
 </head>
-<body id="aboutUs">
+<body>
     <header>
         <div class="image">
             <img src="images/SV logo_No Background.png">
@@ -261,16 +261,16 @@
                   </span>
                 </label>
               </div>
-            <a href="#aboutUs">About Us</a>
-            <a href="#services" class="anchor">Services</a>
-            <a href="#contact">Contact</a>
+            <a href="#aboutUs" id="aboutUs">About Us</a>
+            <a href="#services" class="anchor" id="services">Services</a>
+            <a href="#contact" id="contactTag">Contact</a>
         </div>
     </header>
     <main>
         <div class="text" >
             <h1 >S&V Associates Pty Ltd</h1>
-            <h4>A present and future business service</h4>
-            <h4>Our mission is your success</h4>
+            <h4 id="description1">A present and future business service</h4>
+            <h4 id="description2">Our mission is your success</h4>
             <div class="aboutUs">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, obcaecati explicabo quos maxime tenetur magni tempora saepe, cum asperiores, doloribus esse sunt et voluptatibus eligendi. Magnam assumenda sequi neque autem.
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, obcaecati explicabo quos maxime tenetur magni tempora saepe, cum asperiores, doloribus esse sunt et voluptatibus eligendi. Magnam assumenda sequi neque autem.
@@ -280,36 +280,36 @@
         </div>
         <div class="services" id="services">
             <div class="title">
-                <h2>OUR SERVICES</h2>
+                <h2 id="serviceTitle">OUR SERVICES</h2>
             </div>
             <div class="servicesContain">
-                <h4>Individuals</h4>
+                <h4 id="serviceContent1">Individuals</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur beatae debitis in sapiente asperiores cumque libero earum architecto maiores inventore porro quam culpa voluptates, ipsam ad ea odio labore corrupti!</p>
             </div>
             <div class="servicesContain">
-                <h4>Businesses</h4>
+                <h4 id="serviceContent2">Businesses</h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quas quod dolor temporibus, odio officiis optio id quia magnam sed iure? Non, placeat. Laborum veniam ipsam mollitia sint. Voluptates, quis!</p>
             </div>
         </div>
         <div class="map">
             <div class="title">
-                <h2>Our location</h2>
+                <h2 id="locationTitle">Our location</h2>
             </div>
             <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.0519472344376!2d145.77502771504132!3d-16.922729588358642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x697866925238939f%3A0xd427e65189886ced!2sOrchid%20Plaza%20Shopping%20Centre!5e0!3m2!1sen!2s!4v1664431906621!5m2!1sen!2s" style="border:none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </main>
     <footer>
         <div class="title">
-            <h2 style="color:white">Leave your message here</h2>
+            <h2 style="color:white" id="contactFormTitle">Leave your message here</h2>
         </div>
         <div class="contain2" id="contact">
             <form action="https://formsubmit.co/ab516aede1f23f6ee50d2be7d6f94a0f" method="POST" >
                 <input type="hidden" name="_captcha" value="false">
-                <input name="First Name" type="text" class="feedback-input" placeholder="First Name" />   
-                <input name="Last Name" type="text" class="feedback-input" placeholder="Last Name" />   
-                <input name="Email" type="text" class="feedback-input" placeholder="Email" />
-                <textarea name="Message" class="feedback-input" placeholder="Your message"></textarea>
-                <input type="submit" value="SUBMIT"/>
+                <input name="First Name" type="text" class="feedback-input" placeholder="First Name" id="First Name" />   
+                <input name="Last Name" type="text" class="feedback-input" placeholder="Last Name" id="Last Name"/>   
+                <input name="Email" type="text" class="feedback-input" placeholder="Email" id="Email"/>
+                <textarea name="Message" class="feedback-input" placeholder="Your message" id="Message"></textarea>
+                <input type="submit" value="Send" id="Submit"/>
             </form>
         </div>
         
@@ -326,14 +326,14 @@
         </div>
         <div class="contactInfo">
             <ul>
-                <li><h4 style="color:white">Contact Information:</h4></li>
+                <li><h4 style="color:white" id="contactInfoTitle">Contact information:</h4></li>
                 <li> <a href="mailto:steven@svass.com.au">Email: steven@svass.com.au</a></li>
-                <li><a href="tel:0423040573">Phone: 0423040573</a></li>
+                <li><a href="tel:0423040573" id="Phone">Phone: 0423040573</a></li>
             </ul>
         </div>
         <div class="social">
             <ul class="icons">
-                <li class="title"><h4 style="color:white">Social Media:</h4></li>
+                <li class="title"><h4 style="color:white" id="socialTitle">Social media:</h4></li>
                 <li>
                     <ul id="iconsList">
                         <li class="icon">
@@ -355,7 +355,6 @@
         
        </div>
     </footer>
-    <script  src="./script.js"></script>
 </body>
     <script>
         let temp=document.getElementsByClassName("temp");
@@ -367,12 +366,80 @@
                 });
             });
         });
-        $('.cb-value').click(function() {
-            var mainParent = $(this).parent('.toggle-btn');
-            if($(mainParent).find('input.cb-value').is(':checked')) {
-                $(mainParent).addClass('active');
-            } else {
-                $(mainParent).removeClass('active');
+        let input=document.getElementById("dn");
+        input.addEventListener('click',function(){
+            console.log("123");
+            if (input.checked) {
+                let ab=document.getElementById("aboutUs");
+                ab.innerHTML="Về chúng tôi";
+                let ser=document.getElementById("services");
+                ser.innerHTML="Dịch vụ";
+                let con=document.getElementById("contactTag");
+                con.innerHTML="Liên hệ";
+                let des1=document.getElementById("description1");
+                des1.innerHTML="Dịch vụ thương mại của tương lai";
+                let des2=document.getElementById("description2");
+                des2.innerHTML="Sự thành công của bạn là nhiệm vụ của chúng tôi";
+                let ser1=document.getElementById("serviceTitle");
+                ser1.innerHTML=("Các loại dịch vụ");
+                let ser2=document.getElementById("serviceContent1");
+                ser2.innerHTML=("Cá nhân");
+                let ser3=document.getElementById("serviceContent2");
+                ser3.innerHTML=("Doanh nghiệp");
+                let loc=document.getElementById("locationTitle");
+                loc.innerHTML="Vị trí của chúng tôi";
+                let formTitle=document.getElementById("contactFormTitle");
+                formTitle.innerHTML=("Hãy để lại lời nhắn cho chúng tôi");
+                let name=document.getElementById("First Name");
+                name.placeholder=("Họ");
+                let name2=document.getElementById("Last Name");
+                name2.placeholder=("Tên");
+                let message=document.getElementById("Message");
+                message.placeholder=("Lời nhắn");
+                let submit=document.getElementById("Submit");
+                submit.value=("Gửi");
+                let con2=document.getElementById("contactInfoTitle");
+                con2.innerHTML=("Thông tin liên hệ:");
+                let phone=document.getElementById("Phone");
+                phone.innerHTML="Số điện thoại: 0423040573";
+                let social=document.getElementById("socialTitle");
+                social.innerHTML=("Mạng xã hội:");
+            }
+            else {
+                let ab=document.getElementById("aboutUs");
+                ab.innerHTML="About Us";
+                let ser=document.getElementById("services");
+                ser.innerHTML="Service";
+                let con=document.getElementById("contactTag");
+                con.innerHTML="Contact";
+                let des1=document.getElementById("description1");
+                des1.innerHTML="A present and future business service";
+                let des2=document.getElementById("description2");
+                des2.innerHTML="Our mission is your success";
+                let ser1=document.getElementById("serviceTitle");
+                ser1.innerHTML=("Service");
+                let ser2=document.getElementById("serviceContent1");
+                ser2.innerHTML=("Individuals");
+                let ser3=document.getElementById("serviceContent2");
+                ser3.innerHTML=("Businesses");
+                let loc=document.getElementById("locationTitle");
+                loc.innerHTML="Our location";
+                let formTitle=document.getElementById("contactFormTitle");
+                formTitle.innerHTML=("Leave your message here");
+                let name=document.getElementById("First Name");
+                name.placeholder=("First Name");
+                let name2=document.getElementById("Last Name");
+                name2.placeholder=("Last Name");
+                let message=document.getElementById("Message");
+                message.placeholder=("Your message");
+                let submit=document.getElementById("Submit");
+                submit.value=("Send");
+                let con2=document.getElementById("contactInfoTitle");
+                con2.innerHTML=("Contact information:");
+                let phone=document.getElementById("Phone");
+                phone.innerHTML="Phone: 0423040573";
+                let social=document.getElementById("socialTitle");
+                social.innerHTML=("Social media:");
             }
         })
     </script>
