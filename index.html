@@ -11,6 +11,7 @@
     <title>Document</title>
     <style>
         * {
+            overscroll-behavior: none;
             margin:0;
             padding:0;
             border:0;
@@ -30,7 +31,7 @@
             background:#1565c0;
             display:flex;
             justify-content:space-between;
-            padding: 0px 20px 0px 0px;
+            padding: 0px 10px 0px 0px;
             position:fixed;
             z-index: 3;
             width:100%;
@@ -50,6 +51,7 @@
             justify-content: space-between;
             align-items: center;
             width:500px;
+            padding-left:10px;
         }
         main {
             text-align: center;
@@ -162,10 +164,10 @@
             background:black;
             padding:20px;
             display:flex;
-            
+            justify-content: space-around;
         }
         .bottom .taxAgent {
-            height:40%;
+            height:42%;
             width:fit-content;
         }
         .bottom .taxAgent img {
@@ -185,12 +187,12 @@
             display:flex;
             flex-direction: column;
             justify-content:space-around;
-            width:33%;
+            width:32%;
             align-items: center;
         }
         .contactInfo {
             height:100%;
-            width:33%;
+            width:32%;
             display:flex;
             align-items:center;
             flex-direction: column;
@@ -204,6 +206,9 @@
         }
         .contactInfo ul li {
             margin-bottom:8px;
+        }
+        .social {
+            width:32%;
         }
         .icon {
             width:48px;
@@ -247,6 +252,28 @@
             width:30px;
             height:30px;
             background:transparent;
+        }
+        @media screen and (max-width: 360px) {
+            header {
+                font-size:9px;
+            }
+            .icon {
+                width:30px;
+                height:30px;
+            }
+            .icon::before {
+                width:30px;
+                height:30px;
+            }
+            footer {
+                font-size: 12px;
+            }
+            .text .aboutUs {
+                font-size:15px;
+            }
+        }
+        #socialTitle {
+            margin-bottom:5px;
         }
     </style>
 </head>
