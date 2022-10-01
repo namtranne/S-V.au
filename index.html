@@ -150,8 +150,6 @@
             top:20%;
             left:20%;
         }
-        footer {
-        }
         footer .title {
             width:100%;
             display:flex;
@@ -183,7 +181,6 @@
             height:100%;
         }
         .logo {
-            height:100%;
             display:flex;
             flex-direction: column;
             justify-content:space-around;
@@ -191,7 +188,6 @@
             align-items: center;
         }
         .contactInfo {
-            height:100%;
             width:32%;
             display:flex;
             align-items:center;
@@ -253,23 +249,62 @@
             height:30px;
             background:transparent;
         }
-        @media screen and (max-width: 360px) {
+        @media screen and (max-width: 400px) {
+            body {
+                width:77%;
+            }
+            footer {
+                width:100vw;
+            }
             header {
                 font-size:9px;
             }
             .icon {
-                width:30px;
-                height:30px;
+                width:22px;
+                height:22px;
             }
             .icon::before {
-                width:30px;
-                height:30px;
+                width:22px;
+                height:22px;
             }
             footer {
                 font-size: 12px;
             }
-            .text .aboutUs {
-                font-size:15px;
+            footer .bottom {
+                justify-content: none;
+                height:20%;
+                display:flex;
+                align-items: center;
+            }
+            footer .title {
+                height:15%;
+            }
+            footer .contain2 {
+                height:65%;
+            }
+            .bottom .logo {
+                width:28%;
+                justify-content: flex-start;
+            }
+            .bottom .contactInfo{
+                width:36%;
+            }
+            .bottom .social {
+                width:36%;
+            }
+            .bottom .logo .taxAgent {
+                height:25%;
+            }
+            .bottom .logo .xero {
+                height:25%;
+            }
+            .bottom .taxAgent img {
+                width:36.3px;
+                height:36.3px;
+            }
+            .bottom .xero img {
+                width:74px;
+                height:36px;
             }
         }
         #socialTitle {
@@ -302,9 +337,9 @@
             <h4 id="description1">A present and future business service</h4>
             <h4 id="description2">Our mission is your success</h4>
             <div class="aboutUs">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, obcaecati explicabo quos maxime tenetur magni tempora saepe, cum asperiores, doloribus esse sunt et voluptatibus eligendi. Magnam assumenda sequi neque autem.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, obcaecati explicabo quos maxime tenetur magni tempora saepe, cum asperiores, doloribus esse sunt et voluptatibus eligendi. Magnam assumenda sequi neque autem.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, obcaecati explicabo quos maxime tenetur magni tempora saepe, cum asperiores, doloribus esse sunt et voluptatibus eligendi. Magnam assumenda sequi neque autem.
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, obcaecati explicabo quos maxime tenetur magni tempora saepe, cum asperiores, doloribus esse sunt et voluptatibus eligendi. Magnam assumenda sequi neque autem.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, obcaecati explicabo quos maxime tenetur magni tempora saepe, cum asperiores, doloribus esse sunt et voluptatibus eligendi. Magnam assumenda sequi neque autem.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, obcaecati explicabo quos maxime tenetur magni tempora saepe, cum asperiores, doloribus esse sunt et voluptatibus eligendi. Magnam assumenda sequi neque autem.</p>
             
             </div>
         </div>
