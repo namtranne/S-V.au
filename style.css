@@ -30,16 +30,16 @@ body {
 .toggle:before {
   content: "English";
   position: absolute;
-  left: -50px;
+  left: -54px;
   top: 8px;
-  font-size: 12px;
+  font-size: 13px;
 }
 .toggle:after {
   content: "Vietnamese";
   position: absolute;
-  right: -74px;
+  right: -82px;
   top: 8px;
-  font-size: 12px;
+  font-size: 13px;
   color: #749ED7;
 }
 
@@ -70,4 +70,10 @@ input:checked + .toggle .toggle__handler img {
 }
 input:checked + .toggle .toggle__handler {
   transform: translate3d(19.7px, 0, 0) rotate(0);
+}
+@media screen and (max-width:1064px) {
+   .toggleWrapper{
+      width:50px;
+      padding:0;
+   }
 }

@@ -37,6 +37,10 @@
             width:100%;
             min-width:inherit;
         }
+        header .menu {
+            display:flex;
+            width:100%;
+        }
         .temp {
             height:100px;
         }
@@ -50,7 +54,7 @@
             display:flex;
             justify-content: space-between;
             align-items: center;
-            width:500px;
+            width:40%;
             padding-left:10px;
         }
         header .option {
@@ -124,9 +128,15 @@
             width:60%;
             
         }
+        header .contain {
+            display:flex;
+            justify-content: space-around;
+        }
         .contain a {
             text-decoration: none;
             color:white;
+            display:flex;
+            align-items: center;
         }
         .contain2 {
             background:#1E314F;
@@ -257,9 +267,69 @@
         .toogle {
             position:absolute;
             top:50%;
-            right:20px;
+            right:30px;
             transform:translateY(-50%);
             display:none;
+        }
+        #contactTag:hover, #aboutUs:hover, #services:hover {
+            color:#ffd740;
+        }
+        @media screen and (max-width: 1064px) {
+            header .option {
+                display:none;
+                flex-direction:column;
+                position:fixed;
+                top:100px;
+                width:100vw;
+                left:0;
+                background-color:#37474f;
+                height:150px;
+                font-size:14px;
+            }
+            header .option a {
+                /* margin: 10px; */
+                padding-left:10px;
+                display:flex;
+                height:calc(100% /3);
+            }
+            header .toogle {
+                display:block;
+            }
+            header .toogle i:nth-child(1) {
+                display:block;
+            }
+            header .toogle i:nth-child(2) {
+                display:none;
+            }
+            header .toogle.active i:nth-child(1) {
+                display:none;
+            }
+            header .toogle.active i:nth-child(2) {
+                display:block;
+            }
+            header .option.active {
+                display:flex;
+            }
+            header .toogle i {
+                font-size:20px;
+            }
+            header .toggle::before {
+                display:none;
+            }
+            header .toggle::after {
+                display:none;
+            }
+            header .contain {
+                display:flex;
+                justify-content:flex-end;
+            }
+            header .menu {
+                width:120px;
+            }
+            #aboutUs:hover, #contactTag:hover, #services:hover{
+            background-color:#1976d2;
+            color:white;
+        }
         }
         @media screen and (max-width: 500px) {
             body {
@@ -318,43 +388,11 @@
                 width:74px;
                 height:36px;
             }
-            header .option {
-                display:none;
-                flex-direction:column;
-                position:fixed;
-                top:100px;
-                width:100vw;
-                left:0;
-                background-color:#37474f;
-            }
-            header .option a {
-                margin: 10px;
-            }
-            header .toogle {
-                display:block;
-            }
-            header .toogle i:nth-child(1) {
-                display:block;
-            }
-            header .toogle i:nth-child(2) {
-                display:none;
-            }
-            header .toogle.active i:nth-child(1) {
-                display:none;
-            }
-            header .toogle.active i:nth-child(2) {
-                display:block;
-            }
-            header .option.active {
-                display:flex;
-            }
-            header .toogle i {
-                font-size:20px;
-            }
         }
         #socialTitle {
             margin-bottom:5px;
         }
+        
     </style>
 </head>
 <body>
@@ -363,18 +401,20 @@
             <img src="images/SV logo_No Background.png">
         </div>
         <div class="contain">
-            <div class="toggleWrapper">
-                <input type="checkbox" class="dn" id="dn"/>
-                <label for="dn" class="toggle">
-                  <span class="toggle__handler">
-                    <img src="./images/English-icon.png" alt="">
-                  </span>
-                </label>
-              </div>
-            <div class="option">
-                <a href="#aboutUs2" id="aboutUs">About Us</a>
-                <a href="#services2" class="anchor" id="services">Services</a>
-                <a href="#contact" id="contactTag">Contact</a>
+            <div class="menu">
+                <div class="toggleWrapper">
+                    <input type="checkbox" class="dn" id="dn"/>
+                    <label for="dn" class="toggle">
+                      <span class="toggle__handler">
+                        <img src="./images/English-icon.png" alt="">
+                      </span>
+                    </label>
+                  </div>
+                <div class="option">
+                    <a href="#aboutUs2" id="aboutUs">About Us</a>
+                    <a href="#services2" class="anchor" id="services">Services</a>
+                    <a href="#contact" id="contactTag">Contact</a>
+                </div>
             </div>
             <span class="toogle" id="toogle">
                 <i class="fa fa-bars"></i>
@@ -476,9 +516,13 @@
         let temp=document.getElementsByClassName("temp");
         let toogle=document.querySelector("#toogle");
         let option=document.querySelector(".option");
+        let toggle=document.querySelector(".toggle");
+        let before=window.getComputedStyle(toggle, "before");
+        let after=window.getComputedStyle(toggle, "after");
         toogle.addEventListener('click', function(){
             toogle.classList.toggle("active");
             option.classList.toggle('active');
+
         })
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
