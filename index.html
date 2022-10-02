@@ -171,8 +171,10 @@
             width:100%;
             display:flex;
             justify-content:center;
-            height: 10%;
+            height: 15%;
             align-items: center;
+            position:absolute;
+            z-index:2;
         }
         footer .contain2 {
                 position: absolute;
@@ -361,6 +363,16 @@
             color:white;
         }
         }
+        @media screen and (max-width:700px) {
+            .icon{
+                width:30px;
+                height:30px;
+            }
+            .icon:before {
+                width:30px;
+                height:30px;
+            }
+        }
         @media screen and (max-width: 500px) {
             body {
                 width:77%;
@@ -455,6 +467,7 @@
                 height:16px;
             }
         }
+        
     </style>
 </head>
 <body>
