@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0", user-scalable="no">
-    <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="./switch.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/switch.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/switch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
         * {
@@ -16,458 +24,55 @@
             padding:0;
             border:0;
             box-sizing: border-box;
-        }
+        } 
         a {
             text-decoration: none;
             color:white;
         }
         body {
-            font-family: Arial,Helvetica,sans-serif;
+            font-family: 'Roboto', sans-serif !important;
+            background:#f5f5f5;
             position: absolute;
-            
         }
-        header {
-            height: 100px;
-            background:#1565c0;
-            display:flex;
-            justify-content:space-between;
-            padding: 0px 10px 0px 0px;
-            position:fixed;
-            z-index: 3;
-            width:100%;
-            min-width:inherit;
-        }
-        header .menu {
-            display:flex;
-            width:100%;
-        }
-        .temp {
-            height:100px;
-        }
-        header img {
-            height:100px;
-            background:white;
-        }
-        header .contain {
-            color:white;
-            height:100px;
-            display:flex;
-            justify-content: space-between;
-            align-items: center;
-            width:40%;
-            padding-left:10px;
-        }
-        header .option {
-            width:80%;
-            display:flex;
-            justify-content:space-around;
-        }
-        main {
-            text-align: center;
-            padding-top:100px;
-            min-width:100vw;
-        }
-        .text h1 {
-            color:#68B04D;
-            font-family: Arial,Helvetica,sans-serif;
-            padding-bottom:10px;
-            border-bottom:1px solid #68B04D;
-        }
-        .text h4 {
-            margin-top:10px;
-            margin-bottom:-10px;
-        }
-        .text {
-            width:100%;
+        main .frequentlyAsk {
+            height:calc(100vh - 100px);
             display:flex;
             flex-direction: column;
-            align-items:center;
-            z-index: 2;
-            background:#e8f5e9;
-            padding-top:20px;
-            height:calc(100vh - 100px);
-        }
-        .aboutUs {
-            width:80%;
-            height:70%;
-            border:1px solid black;
-            margin-top:30px;
-            padding:20px;
-            text-align: left;
-            margin-bottom: 20px;
-        }
-        .services {
-            color:white;
-            width:100%;
-            padding:10px;
-            display:flex;
-            flex-direction: column;
-            scroll-margin-top: 100px;
-            height:calc(100vh - 100px);
-        }
-        .services .title {
-            border-bottom: 1px solid white;
-            height:20%;
-            display:flex;
-            align-items: center;
-            justify-content: center;
-            width:100%;
-        }
-        .servicesContain {
-            display:flex;
-            text-align: left;
-            border-bottom: 1px solid white;
-            height:40%;
-            align-items: center;
-        }
-        .servicesContain h4 {
-            width:40%;
-        }
-        .servicesContain p {
-            
-            width:60%;
-            
-        }
-        header .contain {
-            display:flex;
-            justify-content: space-around;
-        }
-        .contain a {
-            text-decoration: none;
-            color:white;
-            display:flex;
-            align-items: center;
-        }
-        .contain2 {
-            background:#1E314F;
-            padding:10px;
-           
-        }
-        footer {
-            border:1px solid black;
             scroll-margin-top:100px;
-            height:calc(100vh - 100px);
-            position:relative;
         }
-        .map {
-            height:calc(100vh - 100px);
-            position: relative;
-            background:#e8f5e9;
+        .faq {
+            width:80%;
+            margin:0 auto;
         }
-        .map .title {
+        .faq .question{
+            display:flex;
+        }
+        .faq .answer {
+            display:flex;
+        }
+        .faq .question .left {
+            color:#1565c0;
+        }
+        .faq .left {
+            width:10%;
+        }
+        .faq .right {
+            width:80%;
+        }
+        .faq p {
+            text-align: justify;
+        }
+        .frequentlyAsk .title {
             height:20%;
             display:flex;
             justify-content:center;
-            align-items: center;
-        }
-        #map {
-            width:60%;
-            height:60%;
-            position:absolute;
-            top:20%;
-            left:20%;
-        }
-        footer .title {
-            width:100%;
-            display:flex;
-            justify-content:center;
-            height: 15%;
-            align-items: center;
-            position:absolute;
-            z-index:2;
-        }
-        footer .contain2 {
-                position: absolute;
-                top:50%;
-                left:50%;
-                transform: translate(-50%, -50%);
-                width:100%;
-        }
-        .bottom {
-
-            height:180px;
-            background:black;
-            padding:20px;
-            display:flex;
-            justify-content: space-around;
-            width:100vw;
-            bottom:0;
-        }
-        .bottom .taxAgent {
-            height:42%;
-            width:fit-content;
-        }
-        .bottom .taxAgent img {
-            height:100%;
-            background:white;
-            border-radius: 50%;
-        }
-        .bottom .xero {
-            height:40%;
-            width:fit-content;
-        }
-        .bottom .xero img {
-            height:100%;
-        }
-        .logo {
-            display:flex;
-            flex-direction: column;
-            justify-content:space-around;
-            width:32%;
-            align-items: center;
-        }
-        .contactInfo {
-            width:32%;
-            display:flex;
             align-items:center;
-            flex-direction: column;
-            flex-direction: space-around;
+            padding:0px 15px;
         }
-        .contactInfo h4 {
-            height:20%;
+        .frequentlyAsk .contain {
+            height:70%;
+            overflow:scroll;
         }
-        .contactInfo ul {
-            height:80%;
-        }
-        .contactInfo ul li {
-            margin-bottom:8px;
-        }
-        .social {
-            width:32%;
-        }
-        .icon {
-            width:48px;
-            height:48px;
-            border-radius:50%;
-            background-color:#777;
-            margin:4px;
-            overflow: hidden;
-            position: relative;
-        }
-        .icon i{
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform: translate(-50%,-50%);
-            display:flex;
-            justify-content:center;
-            align-items: center;
-            z-index: 1;
-        }
-        .icon::before {
-            border-radius:50%;
-            content:"";
-            display:block;
-            width:48px;
-            height:48px;
-            position: absolute;
-            background-color:grey;
-        }
-        .icon:hover::before {
-            background-color:#2d3436;
-        }
-        #iconsList {
-            display:flex;
-            justify-content:space-between;
-        }
-        .icon a {
-            color:black;
-        }
-        .toggle__handler img {
-            width:30px;
-            height:30px;
-            background:transparent;
-        }
-        .toogle {
-            position:absolute;
-            top:50%;
-            right:30px;
-            transform:translateY(-50%);
-            display:none;
-        }
-        .icons .title {
-            display:flex;
-            justify-content:center;
-        }
-        #contactTag:hover, #aboutUs:hover, #services:hover {
-            color:#ffd740;
-        }
-        ul {
-            list-style: none;
-        }
-        .icons li  {
-            margin-bottom:10px;
-        }
-        .bottom .taxAgent img {
-            width:60px;
-            height:60px;
-        }
-        .bottom .xero img {
-            width:121px;
-            height:60px;
-        }
-        @media screen and (max-width: 1064px) {
-            header .option {
-                display:none;
-                flex-direction:column;
-                position:fixed;
-                top:100px;
-                width:100vw;
-                left:0;
-                background-color:#37474f;
-                height:150px;
-                font-size:14px;
-            }
-            header .option a {
-                /* margin: 10px; */
-                padding-left:10px;
-                display:flex;
-                height:calc(100% /3);
-            }
-            header .toogle {
-                display:block;
-            }
-            header .toogle i:nth-child(1) {
-                display:block;
-            }
-            header .toogle i:nth-child(2) {
-                display:none;
-            }
-            header .toogle.active i:nth-child(1) {
-                display:none;
-            }
-            header .toogle.active i:nth-child(2) {
-                display:block;
-            }
-            header .option.active {
-                display:flex;
-            }
-            header .toogle i {
-                font-size:20px;
-            }
-            header .toggle::before {
-                display:none;
-            }
-            header .toggle::after {
-                display:none;
-            }
-            header .contain {
-                display:flex;
-                justify-content:flex-end;
-            }
-            header .menu {
-                width:120px;
-            }
-            #aboutUs:hover, #contactTag:hover, #services:hover{
-            background-color:#1976d2;
-            color:white;
-        }
-        }
-        @media screen and (max-width:700px) {
-            .icon{
-                width:30px;
-                height:30px;
-            }
-            .icon:before {
-                width:30px;
-                height:30px;
-            }
-        }
-        @media screen and (max-width: 500px) {
-            body {
-                width:77%;
-            }
-            footer {
-                width:100vw;
-            }
-            header {
-                font-size:12px;
-            }
-            .icon {
-                width:22px;
-                height:22px;
-            }
-            .icon::before {
-                width:22px;
-                height:22px;
-            }
-            footer {
-                font-size: 12px;
-            }
-            .bottom {
-                justify-content: none;
-                display:flex;
-                align-items: center;
-                font-size:12px;
-            }
-            
-            footer .title {
-                height:35px;
-            }
-            .bottom .logo {
-                width:28%;
-                justify-content: flex-start;
-            }
-            .bottom .contactInfo{
-                width:36%;
-            }
-            .bottom .social {
-                width:36%;
-            }
-            .bottom .logo .taxAgent {
-                height:25%;
-            }
-            .bottom .logo .xero {
-                height:25%;
-            }
-            .bottom .taxAgent img {
-                width:36.3px;
-                height:36.3px;
-            }
-            .bottom .xero img {
-                width:74px;
-                height:36px;
-            }
-        }
-        
-        #socialTitle {
-            margin-bottom:5px;
-        }
-        @media screen and (max-width:375px) {
-            .text .aboutUs {
-                font-size:11px;
-            }
-            .servicesContain p {
-                font-size:11px;
-            }
-            .services .title {
-                height:30px;
-                font-size:15px;
-            }
-            .servicesContain {
-                height: calc((100vh - 100px - 30px)/2);
-            }
-            .bottom {
-                font-size:8px;
-            }
-            .bottom .taxAgent img {
-                width:30px;
-                height:30px;
-            }
-            .bottom .xero img {
-                width:61px;
-                height:30px;
-            }
-            .icon {
-                width:16px;
-                height:16px;
-            }
-            .icon::before {
-                width:16px;
-                height:16px;
-            }
-        }
-        
     </style>
 </head>
 <body>
@@ -487,7 +92,7 @@
                   </div>
                 <div class="option">
                     <a href="#aboutUs2" id="aboutUs">About Us</a>
-                    <a href="#services2" class="anchor" id="services">Services</a>
+                    <a href="#FAQS2" class="anchor" id="FAQS">FAQS</a>
                     <a href="#contact" id="contactTag">Contact</a>
                 </div>
             </div>
@@ -503,25 +108,81 @@
             <h4 id="description1">A present and future business service</h4>
             <h4 id="description2">Our mission is your success</h4>
             <div class="aboutUs">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, obcaecati explicabo quos maxime tenetur magni tempora saepe, cum asperiores, doloribus esse sunt et voluptatibus eligendi. Magnam assumenda sequi neque autem.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, obcaecati explicabo quos maxime tenetur magni tempora saepe, cum asperiores, doloribus esse sunt et voluptatibus eligendi. Magnam assumenda sequi neque autem.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, obcaecati explicabo quos maxime tenetur magni tempora saepe, cum asperiores, doloribus esse sunt et voluptatibus eligendi. Magnam assumenda sequi neque autem.</p>
-            
-            </div>
+               <p id="line1">S&V Associates is a registered tax agent and public accountant in Cairns, QLD</p>
+               <p id="line2">We offer professional solutions to address your tax matters if you are:</p>
+               <p id="line3">-	Business Owners who need the right business structure and tax planning to minimise tax legally.</p>
+               <p id="line4">-	Business Owners who need someone who takes care of their paperwork and weekly payroll smoothly like a professional bookkeeper.</p>
+               <p id="line5">-	Employees of cafés, restaurants, warehouses, farms, offices, etc who wants to get maximum tax refunds and good planning before year end to save money in super to use for their first home deposit but get massive extra tax refunds in their tax returns from this.</p>
+               <p id="line6">-	Working Holiday Visa Holders 417 or 462 & Covid Visa 408 Holders who need someone to act on your behalf and tell the ATO that “I am foreigner but a resident for tax purpose and eligible for extra refunds.”</p>
+               <p id="line7">-	Student Visa Holders who may need supports to send Medicare a form to claim Medicare levy exemption to get extra tax refunds.</p>
+               <p id="line8">-	You don’t have time to visit a tax agent in person and would like to do your tax online?</p>
+               <p id="line9">Paperwork’s + Tax = HEADACHE. Let us replace 2nd side of the equation to SUCCESS, without the use of Panadol. We will let you get back to doing what you do best - running your business without worrying about your paperwork’s no more.</p>
+               <p id="line10">Our founder, Steven Ta has more than 10 years of experience helping clients maximise their tax position and unlock the value of their businesses. This industry experience allows us to develop tailored solutions to meet each client’s unique needs.</p>
+               <p id="line11">For more information on what we can offer and how our accounting experience can enhance your business, contact us today.</p>
+
         </div>
-        <div class="services" id="services2">
+        </div>
+       <div class="frequentlyAsk" id="FAQS2">
             <div class="title">
-                <h2 id="serviceTitle">OUR SERVICES</h2>
+                <h2>Something you may need to know</h2>
             </div>
-            <div class="servicesContain">
-                <h4 id="serviceContent1">Individuals</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur beatae debitis in sapiente asperiores cumque libero earum architecto maiores inventore porro quam culpa voluptates, ipsam ad ea odio labore corrupti!</p>
+            <div class="contain">
+                <div class="faq">
+                    <div class="question">
+                        <div class="left">
+                            <h3>Q.</h3>
+                        </div>
+                        <div class="right">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum natus tempore repudiandae rem accusamus aliquid, quam eveniet maxime tempora consequuntur quas error ipsam enim nulla. Voluptatem culpa inventore dicta illo id! Velit, optio non? Dignissimos sed non ipsa quidem deserunt.</p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="left">
+                            <h3>A.</h3>
+                        </div>
+                        <div class="right">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsum, voluptatem soluta et, ab impedit cum rerum illo iusto dignissimos animi eius sapiente similique aut a cumque vero, vel repudiandae nam maiores nisi mollitia id quisquam facere! Esse, ullam quisquam.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <div class="left">
+                            <h3>Q.</h3>
+                        </div>
+                        <div class="right">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum natus tempore repudiandae rem accusamus aliquid, quam eveniet maxime tempora consequuntur quas error ipsam enim nulla. Voluptatem culpa inventore dicta illo id! Velit, optio non? Dignissimos sed non ipsa quidem deserunt.</p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="left">
+                            <h3>A.</h3>
+                        </div>
+                        <div class="right">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsum, voluptatem soluta et, ab impedit cum rerum illo iusto dignissimos animi eius sapiente similique aut a cumque vero, vel repudiandae nam maiores nisi mollitia id quisquam facere! Esse, ullam quisquam.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <div class="left">
+                            <h3>Q.</h3>
+                        </div>
+                        <div class="right">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum natus tempore repudiandae rem accusamus aliquid, quam eveniet maxime tempora consequuntur quas error ipsam enim nulla. Voluptatem culpa inventore dicta illo id! Velit, optio non? Dignissimos sed non ipsa quidem deserunt.</p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="left">
+                            <h3>A.</h3>
+                        </div>
+                        <div class="right">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsum, voluptatem soluta et, ab impedit cum rerum illo iusto dignissimos animi eius sapiente similique aut a cumque vero, vel repudiandae nam maiores nisi mollitia id quisquam facere! Esse, ullam quisquam.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="servicesContain">
-                <h4 id="serviceContent2">Businesses</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quas quod dolor temporibus, odio officiis optio id quia magnam sed iure? Non, placeat. Laborum veniam ipsam mollitia sint. Voluptates, quis!</p>
-            </div>
-        </div>
+       </div>
         <div class="map">
             <div class="title">
                 <h2 id="locationTitle">Our location</h2>
@@ -589,6 +250,8 @@
     
 </body>
     <script>
+        let text=document.querySelector(".text");
+        text.style.backgroundImage="url('/images/background.jpeg')";
         let temp=document.getElementsByClassName("temp");
         let toogle=document.querySelector("#toogle");
         let option=document.querySelector(".option");
@@ -610,80 +273,98 @@
         });
         let input=document.getElementById("dn");
         input.addEventListener('click',function(){
+            let ab=document.getElementById("aboutUs");
+            let faq=document.getElementById("FAQS");
+            let con=document.getElementById("contactTag");
+            let des1=document.getElementById("description1");
+            let des2=document.getElementById("description2");
+            let loc=document.getElementById("locationTitle");
+            let formTitle=document.getElementById("contactFormTitle");
+            let name=document.getElementById("First Name");
+            let name2=document.getElementById("Last Name");
+            let message=document.getElementById("Message");
+            let submit=document.getElementById("Submit");
+            let con2=document.getElementById("contactInfoTitle");
+            let phone=document.getElementById("Phone");
+            let social=document.getElementById("socialTitle");
+            let line1=document.getElementById("line1");
+            let line2=document.getElementById("line2");
+            let line3=document.getElementById("line3");
+            let line4=document.getElementById("line4");
+            let line5=document.getElementById("line5");
+            let line6=document.getElementById("line6");
+            let line7=document.getElementById("line7");
+            let line8=document.getElementById("line8");
+            let line9=document.getElementById("line9");
+            let line10=document.getElementById("line10");
+            let line11=document.getElementById("line11");
             if (input.checked) {
-                let ab=document.getElementById("aboutUs");
                 ab.innerHTML="Về chúng tôi";
-                let ser=document.getElementById("services");
-                ser.innerHTML="Dịch vụ";
-                let con=document.getElementById("contactTag");
+                faq.innerHTML="Hỏi đáp";
                 con.innerHTML="Liên hệ";
-                let des1=document.getElementById("description1");
                 des1.innerHTML="Dịch vụ thương mại của tương lai";
-                let des2=document.getElementById("description2");
                 des2.innerHTML="Sự thành công của bạn là nhiệm vụ của chúng tôi";
-                let ser1=document.getElementById("serviceTitle");
-                ser1.innerHTML=("Các loại dịch vụ");
-                let ser2=document.getElementById("serviceContent1");
-                ser2.innerHTML=("Cá nhân");
-                let ser3=document.getElementById("serviceContent2");
-                ser3.innerHTML=("Doanh nghiệp");
-                let loc=document.getElementById("locationTitle");
                 loc.innerHTML="Vị trí của chúng tôi";
-                let formTitle=document.getElementById("contactFormTitle");
                 formTitle.innerHTML=("Hãy để lại lời nhắn cho chúng tôi");
-                let name=document.getElementById("First Name");
                 name.placeholder=("Họ");
-                let name2=document.getElementById("Last Name");
                 name2.placeholder=("Tên");
-                let message=document.getElementById("Message");
                 message.placeholder=("Lời nhắn");
-                let submit=document.getElementById("Submit");
                 submit.value=("Gửi");
-                let con2=document.getElementById("contactInfoTitle");
                 con2.innerHTML=("Thông tin liên hệ:");
-                let phone=document.getElementById("Phone");
                 phone.innerHTML="Số điện thoại: 0423040573";
-                let social=document.getElementById("socialTitle");
                 social.innerHTML=("Mạng xã hội:");
+                line1.innerHTML="S&V Associates là đại lý thuế và kế toán công tại Cairns, QLD";
+                line2.innerHTML="Chúng tôi cung cấp các giải pháp chuyên nghiệp để giải quyết các vấn đề về thuế của bạn cho các nhóm đối tượng sau:";
+                line3.innerHTML="- Các Chủ Doanh Nghiệp cần chọn  loại hình doanh nghiệp phù hợp (Sole Trader, Partnership, Company, Trust, etc.) và lập kế hoạch thuế phù hợp để giảm thiểu thuế một cách hợp pháp.";
+                line4.innerHTML="- Các chủ Doanh nghiệp cần người lo giấy tờ và tính lương hàng tuần một cách chuyên nghiệp và nhanh chóng (bookkeeper)";
+                line5.innerHTML="- Nhân viên quán cà phê, nhà hàng, nhà kho, trang trại, văn phòng, v.v. muốn được hoàn thuế tối đa và lập kế hoạch tốt trước khi kết thúc năm tài chính để vừa tiết kiệm tiền hưu bổng để sử dụng cho lần đặt cọc mua nhà đầu tiên của họ mà còn được hoàn thuế lớn trong tờ khai thuế của họ từ đây. (Super Personal Deduction)";
+                line6.innerHTML="- Những người có Visa Working Holiday 417 hoặc 462 & Covid Visa 408, những người cần ai đó thay mặt bạn và nói với ATO rằng “Tôi là người nước ngoài nhưng là cư dân vì mục đích thuế (resident for tax purpose) và đủ điều kiện để được hoàn thêm tiền như người Úc.”";
+                line7.innerHTML="- Người có Visa Sinh viên, cần hỗ trợ để gửi cho Medicare yêu cầu certificate để miễn thuế Medicare Levy và để được hoàn thuế thêm. (Do thuế mặc định phần này trong tax form, nhiều bạn tự làm thuế không biết nên vô tình bị đóng phần này oan mặc dù không hề được xài medicare và đã đóng oversea health insurance rồi)";
+                line8.innerHTML="- Bạn bận rộn, không có thời gian để gặp kế toán trực tiếp và muốn làm online?";
+                line9.innerHTML="GIẤY TỜ + THUẾ = NHỨC ĐẦU. Hãy để chúng tôi thay thế vế thứ 2 của phương trình thành THÀNH CÔNG mà không cần sử dụng Panadol. Chúng tôi sẽ giúp bạn quay trở lại làm những gì bạn giỏi nhất (tức là kiếm tiền và điều hành doanh nghiệp của bạn) mà không cần lo lắng về thủ tục giấy tờ của bạn nữa.";
+                line10.innerHTML="Người sáng lập của chúng tôi, Steven Ta có hơn 10 năm kinh nghiệm giúp khách hàng tối đa hóa thuế và tập trung nâng cao giá trị doanh nghiệp của họ. Kinh nghiệm trong ngành này cho phép chúng tôi phát triển các giải pháp phù hợp để đáp ứng nhu cầu riêng của từng khách hàng.";
+                line11.innerHTML="Để biết thêm thông tin về những gì chúng tôi có thể cung cấp và kinh nghiệm kế toán của chúng tôi có thể nâng cao hoạt động kinh doanh của bạn như thế nào, hãy liên hệ với chúng tôi ngay hôm nay.";
+                
             }
             else {
-                let ab=document.getElementById("aboutUs");
                 ab.innerHTML="About Us";
-                let ser=document.getElementById("services");
-                ser.innerHTML="Service";
-                let con=document.getElementById("contactTag");
+                faq.innerHTML="FAQS";
                 con.innerHTML="Contact";
-                let des1=document.getElementById("description1");
                 des1.innerHTML="A present and future business service";
-                let des2=document.getElementById("description2");
                 des2.innerHTML="Our mission is your success";
-                let ser1=document.getElementById("serviceTitle");
-                ser1.innerHTML=("Service");
-                let ser2=document.getElementById("serviceContent1");
-                ser2.innerHTML=("Individuals");
-                let ser3=document.getElementById("serviceContent2");
-                ser3.innerHTML=("Businesses");
-                let loc=document.getElementById("locationTitle");
                 loc.innerHTML="Our location";
-                let formTitle=document.getElementById("contactFormTitle");
                 formTitle.innerHTML=("Leave your message here");
-                let name=document.getElementById("First Name");
                 name.placeholder=("First Name");
-                let name2=document.getElementById("Last Name");
                 name2.placeholder=("Last Name");
-                let message=document.getElementById("Message");
                 message.placeholder=("Your message");
-                let submit=document.getElementById("Submit");
                 submit.value=("Send");
-                let con2=document.getElementById("contactInfoTitle");
                 con2.innerHTML=("Contact information:");
-                let phone=document.getElementById("Phone");
                 phone.innerHTML="Phone: 0423040573";
-                let social=document.getElementById("socialTitle");
                 social.innerHTML=("Social media:");
+                line1.innerHTML="S&V Associates is a registered tax agent and public accountant in Cairns, QLD";
+                line2.innerHTMl="We offer professional solutions to address your tax matters if you are:";
+                line3.innerHTML="-	Business Owners who need the right business structure and tax planning to minimise tax legally.";
+                line4.innerHTML="-	Business Owners who need someone who takes care of their paperwork and weekly payroll smoothly like a professional bookkeeper.";
+                line5.innerHTML="-	Employees of cafés, restaurants, warehouses, farms, offices, etc who wants to get maximum tax refunds and good planning before year end to save money in super to use for their first home deposit but get massive extra tax refunds in their tax returns from this.";
+                line6.innerHTML='-	Working Holiday Visa Holders 417 or 462 & Covid Visa 408 Holders who need someone to act on your behalf and tell the ATO that “I am foreigner but a resident for tax purpose and eligible for extra refunds.';
+                line7.innerHTML="-	Student Visa Holders who may need supports to send Medicare a form to claim Medicare levy exemption to get extra tax refunds.";
+                line8.innerHTML="-	You don’t have time to visit a tax agent in person and would like to do your tax online?";
+                line9.innerHTML="Paperwork’s + Tax = HEADACHE. Let us replace 2nd side of the equation to SUCCESS, without the use of Panadol. We will let you get back to doing what you do best - running your business without worrying about your paperwork’s no more.";
+                line10.innerHTML="Our founder, Steven Ta has more than 10 years of experience helping clients maximise their tax position and unlock the value of their businesses. This industry experience allows us to develop tailored solutions to meet each client’s unique needs.";
+                line11.innerHTML="For more information on what we can offer and how our accounting experience can enhance your business, contact us today.";
             }
-        })
-        
+        });
+        window.addEventListener("scroll", function(event){
+            let y=this.scrollY;
+            let header = document.querySelector("header")
+            if (y==0) {
+                header.style.backgroundColor="transparent";
+
+            }
+            else {
+                header.style.backgroundColor="#1565c0";
+            }
+        });
     </script>
 </body>
 </html>

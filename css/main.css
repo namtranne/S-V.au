@@ -1,0 +1,39 @@
+main {
+    text-align: center;
+    min-width:100vw;
+}
+.text h1 {
+    color:white;
+    padding-bottom:10px;
+    border-bottom:1px solid white;
+}
+.text h4 {
+    margin-top:10px;
+    margin-bottom:-10px;
+    color:white;
+}
+.text {
+    padding-top:100px;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    z-index: 2;
+    background-image:url("../images/background.jpeg") !important;
+    background-size: cover;
+    background-position: center;
+    padding-top:120px;
+    height:calc(100vh);
+}
+.aboutUs {
+    width:80%;
+    height:70%;
+    border:1px solid black;
+    margin-top:30px;
+    padding:20px;
+    text-align: left;
+    margin-bottom: 20px;
+    background:white;
+    opacity:0.8;
+    overflow:scroll;
+}

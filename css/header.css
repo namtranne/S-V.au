@@ -1,0 +1,43 @@
+header {
+    height: 100px;
+    background:transparent;
+    display:flex;
+    justify-content:space-between;
+    padding: 0px 10px 0px 0px;
+    position:fixed;
+    z-index: 3;
+    width:100%;
+    min-width:inherit;
+}
+header .menu {
+    display:flex;
+    width:100%;
+}
+header img {
+    height:100px;
+    background:white;
+}
+header .contain {
+    color:white;
+    height:100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:40%;
+    padding-left:10px;
+}
+header .option {
+    width:80%;
+    display:flex;
+    justify-content:space-around;
+}
+header .contain {
+    display:flex;
+    justify-content: space-around;
+}
+.contain a {
+    text-decoration: none;
+    color:white;
+    display:flex;
+    align-items: center;
+}

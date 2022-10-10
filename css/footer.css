@@ -1,0 +1,171 @@
+.contain2 {
+    padding:10px;
+   
+}
+footer {
+    background:#2b7dac;
+    scroll-margin-top:100px;
+    height:calc(100vh - 100px);
+    position:relative;
+
+}
+.map {
+    height:calc(100vh - 100px);
+    position: relative;
+    background-image: url("../images/sl_030720_28740_09.jpg");
+    background-size:cover;
+    background-position:center;
+}
+.map .title {
+    height:20%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+#map {
+    width:60%;
+    height:60%;
+    position:absolute;
+    top:20%;
+    left:20%;
+}
+footer .title {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    height: 15%;
+    align-items: center;
+    position:absolute;
+    z-index:2;
+}
+footer .contain2 {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width:100%;
+}
+.bottom {
+
+    height:180px;
+    background:black;
+    padding:20px;
+    display:flex;
+    justify-content: space-around;
+    width:100vw;
+    bottom:0;
+}
+.bottom .taxAgent {
+    height:42%;
+    width:fit-content;
+}
+.bottom .taxAgent img {
+    height:100%;
+    background:white;
+    border-radius: 50%;
+}
+.bottom .xero {
+    height:40%;
+    width:fit-content;
+}
+.bottom .xero img {
+    height:100%;
+}
+.logo {
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    width:32%;
+    align-items: center;
+}
+.contactInfo {
+    width:32%;
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    flex-direction: space-around;
+}
+.contactInfo h4 {
+    height:20%;
+}
+.contactInfo ul {
+    height:80%;
+}
+.contactInfo ul li {
+    margin-bottom:8px;
+}
+.social {
+    width:32%;
+}
+.icon {
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background-color:#777;
+    margin:4px;
+    overflow: hidden;
+    position: relative;
+}
+.icon i{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 1;
+}
+.icon::before {
+    border-radius:50%;
+    content:"";
+    display:block;
+    width:48px;
+    height:48px;
+    position: absolute;
+    background-color:grey;
+}
+.icon:hover::before {
+    background-color:#2d3436;
+}
+#iconsList {
+    display:flex;
+    justify-content:space-between;
+}
+.icon a {
+    color:black;
+}
+.toggle__handler img {
+    width:30px;
+    height:30px;
+    background:transparent;
+}
+.toogle {
+    position:absolute;
+    top:50%;
+    right:30px;
+    transform:translateY(-50%);
+    display:none;
+}
+.icons .title {
+    display:flex;
+    justify-content:center;
+}
+#contactTag:hover, #aboutUs:hover, #FAQS:hover {
+    color:#ffd740;
+}
+ul {
+    list-style: none;
+}
+.icons li  {
+    margin-bottom:10px;
+}
+.bottom .taxAgent img {
+    width:60px;
+    height:60px;
+}
+.bottom .xero img {
+    width:121px;
+    height:60px;
+}
