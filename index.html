@@ -124,7 +124,7 @@
         </div>
        <div class="frequentlyAsk" id="FAQS2">
             <div class="title">
-                <h2>Something you may need to know</h2>
+                <h2 id="faqtitle">Something you may need to know</h2>
             </div>
             <div class="contain">
                 <div class="faq">
@@ -298,6 +298,7 @@
             let line9=document.getElementById("line9");
             let line10=document.getElementById("line10");
             let line11=document.getElementById("line11");
+            let faqtitle=document.getElementById("faqtitle");
             if (input.checked) {
                 ab.innerHTML="Về chúng tôi";
                 faq.innerHTML="Hỏi đáp";
@@ -324,7 +325,7 @@
                 line9.innerHTML="GIẤY TỜ + THUẾ = NHỨC ĐẦU. Hãy để chúng tôi thay thế vế thứ 2 của phương trình thành THÀNH CÔNG mà không cần sử dụng Panadol. Chúng tôi sẽ giúp bạn quay trở lại làm những gì bạn giỏi nhất (tức là kiếm tiền và điều hành doanh nghiệp của bạn) mà không cần lo lắng về thủ tục giấy tờ của bạn nữa.";
                 line10.innerHTML="Người sáng lập của chúng tôi, Steven Ta có hơn 10 năm kinh nghiệm giúp khách hàng tối đa hóa thuế và tập trung nâng cao giá trị doanh nghiệp của họ. Kinh nghiệm trong ngành này cho phép chúng tôi phát triển các giải pháp phù hợp để đáp ứng nhu cầu riêng của từng khách hàng.";
                 line11.innerHTML="Để biết thêm thông tin về những gì chúng tôi có thể cung cấp và kinh nghiệm kế toán của chúng tôi có thể nâng cao hoạt động kinh doanh của bạn như thế nào, hãy liên hệ với chúng tôi ngay hôm nay.";
-                
+                faqtitle.innerHTML="Something you may need to know";
             }
             else {
                 ab.innerHTML="About Us";
@@ -352,6 +353,7 @@
                 line9.innerHTML="Paperwork’s + Tax = HEADACHE. Let us replace 2nd side of the equation to SUCCESS, without the use of Panadol. We will let you get back to doing what you do best - running your business without worrying about your paperwork’s no more.";
                 line10.innerHTML="Our founder, Steven Ta has more than 10 years of experience helping clients maximise their tax position and unlock the value of their businesses. This industry experience allows us to develop tailored solutions to meet each client’s unique needs.";
                 line11.innerHTML="For more information on what we can offer and how our accounting experience can enhance your business, contact us today.";
+                faqtitle.innerHTML="Những câu hỏi thường gặp";
             }
         });
         window.addEventListener("scroll", function(event){
