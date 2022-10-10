@@ -12,9 +12,9 @@ footer {
 .map {
     height:calc(100vh - 100px);
     position: relative;
-    background-image: url("../images/sl_030720_28740_09.jpg");
+    background-image: url("../images/sl_030720_28740_09.jpg") !important;
     background-size:cover;
-    background-position:center;
+    background-position:center bottom;
 }
 .map .title {
     height:20%;
@@ -40,11 +40,12 @@ footer .title {
     z-index:2;
 }
 footer .contain2 {
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
         width:100%;
+        overflow:scroll;
+        height:80%;
+        margin: auto auto;
+        position:absolute;
+        top:15%;
 }
 .bottom {
 
