@@ -83,19 +83,13 @@
         width:22px;
         height:22px;
     }
-    footer {
-        font-size: 12px;
-    }
     .bottom {
         justify-content: none;
         display:flex;
         align-items: center;
         font-size:12px;
     }
-    
-    footer .title {
-        height:35px;
-    }
+
     .bottom .logo {
         width:28%;
         justify-content: flex-start;
