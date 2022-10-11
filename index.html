@@ -75,13 +75,149 @@
             height:70%;
             overflow:scroll;
         }
+        .carousel-item {
+        }
         .carousel-item img{
-            max-height: 100%;
+            width:100%;
+            height:600px;
         }
         .carousel-caption {
             top:0;
             bottom:auto;
             color:black;
+        }
+        #steven {
+            height:200px;
+            width: 200px;
+            border-radius: 50%;
+            opacity: 1 !important;
+        }
+        #glass {
+            height:200px;
+            width: 200px;
+            border-radius: 50%;
+            margin-top:30px;
+        }
+        .glass {
+            top:50%;
+            left:50%;
+        }
+        .carousel-indicators [data-bs-target] {
+            background-color:black;
+        }
+        .carousel-control-prev-icon {
+            filter: invert(100%);
+            position:fixed;
+        }
+        .carousel-control-next-icon {
+            filter: invert(100%);
+            position:fixed;
+        }
+        @media screen and (max-width:350px) {
+            #glass {
+                height:150px;
+                width: 150px;
+                border-radius: 50%;
+                margin-top:30px;
+            }
+            #steven {
+                height:150px;
+                width: 150px;
+                border-radius: 50%;
+                opacity: 1 !important;
+            }
+        }
+        @media screen and (max-width:260px) {
+            #glass {
+                height:120px;
+                width: 120px;
+                border-radius: 50%;
+                margin-top:30px;
+            }
+            #steven {
+                height:120px;
+                width: 120px;
+                border-radius: 50%;
+                opacity: 1 !important;
+            }
+        }
+        @media screen and (max-width: 1115px) {
+            .carousel-item img{
+                width:100%;
+                height:700px;
+            }
+        }
+        @media screen and (max-width: 870px) {
+            .carousel-item img{
+                width:100%;
+                height:800px;
+            }
+        }
+        @media screen and (max-width: 750px) {
+            .carousel-item img{
+                width:100%;
+                height:900px;
+            }
+        }
+        @media screen and (max-width: 650px) {
+            .carousel-item img{
+                width:100%;
+                height:1000px;
+            }
+        }
+        @media screen and (max-width: 540px) {
+            .carousel-item img{
+                width:100%;
+                height:1100px;
+            }
+        }
+        @media screen and (max-width: 470px) {
+            .carousel-item img{
+                width:100%;
+                height:1200px;
+            }
+        }
+        @media screen and (max-width: 421px) {
+            .carousel-item img{
+                width:100%;
+                height:1300px;
+            }
+        }
+        @media screen and (max-width: 390px) {
+            .carousel-item img{
+                width:100%;
+                height:1400px;
+            }
+        }
+        @media screen and (max-width: 355px) {
+            .carousel-item img{
+                width:100%;
+                height:1600px;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            .carousel-item img{
+                width:100%;
+                height:1700px;
+            }
+        }
+        @media screen and (max-width: 294px) {
+            .carousel-item img{
+                width:100%;
+                height:1800px;
+            }
+        }
+        @media screen and (max-width: 275px) {
+            .carousel-item img{
+                width:100%;
+                height:1900px;
+            }
+        }
+        @media screen and (max-width: 269px) {
+            .carousel-item img{
+                width:100%;
+                height:2500px;
+            }
         }
     </style>
 </head>
@@ -118,21 +254,20 @@
             <h4 id="description1">A present and future business service</h4>
             <h4 id="description2">Our mission is your success</h4>
             <div id="aboutUs3" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#aboutUs3" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#aboutUs3" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#aboutUs3" data-bs-slide-to="2"></button>
-                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="/images/8.jpeg" alt="Los Angeles" class="d-block" style="width:100%">
+                        <img src="/images/8.png" alt="Los Angeles" class="d-block">
                         <div class="carousel-caption">
                             <h3>What are we?</h3>
                             <p id="line1">S&V Associates is a registered tax agent and public accountant in Cairns, QLD</p>
+                            <div class="glass">
+                                <img src="/images/glass2.jpg" alt="" id="glass">
+                                <img src="/images/glass1.jpg" alt="" id="glass">
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="/images/8.jpeg" alt="Los Angeles" class="d-block" style="width:100%">
+                        <img src="/images/8.png" alt="Los Angeles" class="d-block">
                       <div class="carousel-caption">
                         <h3>What can we do?</h3>
                         <p id="line2">We offer professional solutions to address your tax matters if you are:</p>
@@ -146,12 +281,14 @@
                       </div> 
                     </div>
                     <div class="carousel-item">
-                    <img src="/images/8.jpeg" alt="Los Angeles" class="d-block" style="width:100%">
+                    <img src="/images/8.png" alt="Los Angeles" class="d-block">
                       <div class="carousel-caption">
                         <h3>Our founder</h3>
-                        <p>We love the Big Apple!</p>
                         <p id="line10">Steven Ta has more than 10 years of experience helping clients maximise their tax position and unlock the value of their businesses. This industry experience allows us to develop tailored solutions to meet each client’s unique needs.</p>
                         <p id="line11">For more information on what we can offer and how our accounting experience can enhance your business, contact us today.</p>
+                        <img src="/images/steven.jpg" id="steven">
+                        <p>Steven and a little Timon</p>
+                        
                       </div>  
                     </div>
                 </div>

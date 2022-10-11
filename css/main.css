@@ -33,6 +33,7 @@ main {
     margin-bottom: 20px;
     background:white;
     opacity:0.8;
-    overflow:scroll;
+    overflow: scroll;
     color:black;
+    position: relative;
 }
