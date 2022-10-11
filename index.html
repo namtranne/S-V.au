@@ -195,10 +195,8 @@
             <h2 style="color:white" id="contactFormTitle">Leave your message here</h2>
         </div>
         <div class="contain2">
-            <form action="https://formsubmit.co/ab516aede1f23f6ee50d2be7d6f94a0f" method="POST" >
-                <input type="hidden" name="_captcha" value="false">
-                <input name="First Name" type="text" class="feedback-input" placeholder="First Name" id="First Name" />   
-                <input name="Last Name" type="text" class="feedback-input" placeholder="Last Name" id="Last Name"/>   
+            <form action="https://formsubmit.co/steven@svass.com.au" method="POST" >
+                <input name="First Name" type="text" class="feedback-input" placeholder="Name" id="First Name" />
                 <input name="Email" type="text" class="feedback-input" placeholder="Email" id="Email"/>
                 <textarea name="Message" class="feedback-input" placeholder="Your message" id="Message"></textarea>
                 <input type="submit" value="Send" id="Submit"/>
@@ -281,7 +279,6 @@
             let loc=document.getElementById("locationTitle");
             let formTitle=document.getElementById("contactFormTitle");
             let name=document.getElementById("First Name");
-            let name2=document.getElementById("Last Name");
             let message=document.getElementById("Message");
             let submit=document.getElementById("Submit");
             let con2=document.getElementById("contactInfoTitle");
@@ -307,8 +304,7 @@
                 des2.innerHTML="Sự thành công của bạn là nhiệm vụ của chúng tôi";
                 loc.innerHTML="Vị trí của chúng tôi";
                 formTitle.innerHTML=("Hãy để lại lời nhắn cho chúng tôi");
-                name.placeholder=("Họ");
-                name2.placeholder=("Tên");
+                name.placeholder=("Tên của bạn");
                 message.placeholder=("Lời nhắn");
                 submit.value=("Gửi");
                 con2.innerHTML=("Thông tin liên hệ:");
@@ -335,8 +331,7 @@
                 des2.innerHTML="Our mission is your success";
                 loc.innerHTML="Our location";
                 formTitle.innerHTML=("Leave your message here");
-                name.placeholder=("First Name");
-                name2.placeholder=("Last Name");
+                name.placeholder=("Your name");
                 message.placeholder=("Your message");
                 submit.value=("Send");
                 con2.innerHTML=("Contact information:");
