@@ -25,15 +25,14 @@ main {
     padding-top:120px;
     height:calc(100vh);
 }
-.aboutUs {
+#aboutUs3 {
     width:80%;
     height:70%;
-    border:1px solid black;
     margin-top:30px;
-    padding:20px;
     text-align: left;
     margin-bottom: 20px;
     background:white;
     opacity:0.8;
     overflow:scroll;
+    color:black;
 }
