@@ -5,5 +5,6 @@
     "liveServer.settings.port": 5501,
     "files.associations": {
         "ostream": "cpp"
-    }
+    },
+    "livePreview.defaultPreviewPath": "/Users/tranhainam/Desktop/Code/S-V.au/test.html"
 }

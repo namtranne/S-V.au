@@ -29,7 +29,7 @@
         } 
         a {
             text-decoration: none;
-            color:white;
+            color:white !important;
         }
         body {
             font-family: 'Roboto', sans-serif !important;
@@ -125,6 +125,10 @@
                 width: 150px;
                 border-radius: 50%;
                 opacity: 1 !important;
+                overflow:hidden;
+            }
+            #steven img {
+                width:100%;
             }
         }
         @media screen and (min-width:1000px) {
@@ -231,9 +235,128 @@
         header .option a i {
             display:none;
         }
+        footer .title h2 {
+
+        }
+        .scrollToTop img {
+            width:30px;
+            height:30px;
+            position:fixed;
+            bottom:190px;
+            right:10px;
+            z-index: 2;
+        }
+        footer .contain4 {
+            display:flex;
+            height:80%;
+            position:absolute;
+            top:20%;
+            width:100%;
+        }
+        footer .contain4 .contain3 {
+            position:absolute;
+            height:80%;
+            right:0;
+            width:50%;
+            display:flex;
+            flex-direction:column;
+        }
+        .contain4 .infos {
+            width: 100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+            position:absolute;
+            top:18%;
+        }
+        .infos .locate {
+            width:80%;
+        }
+        .infos .emailAddress {
+            width:80%;
+        }
+        .infos .phoneNumber{
+            width:80%;
+        }
+        .infos .time {
+            width:80%;
+        }
+        @media screen and (max-width:390px) {
+            footer .infos a {
+                font-size:14px;
+            }
+            footer .infos #span {
+                font-size:14px;
+            }
+            footer .infos i {
+                font-size:14px;
+            }
+            footer .infos p{
+                font-size:14px;
+            }
+        }
+        @media screen and (max-width:350px) {
+            footer .infos a {
+                font-size:13px;
+            }
+            footer .infos #span {
+                font-size:13px;
+            }
+            footer .infos i {
+                font-size:13px;
+            }
+            footer .infos p{
+                font-size:13px;
+            }
+        }
+        @media screen and (max-width:320px) {
+            footer .infos a {
+                font-size:12px;
+            }
+            footer .infos #span {
+                font-size:12px;
+            }
+            footer .infos i {
+                font-size:12px;
+            }
+            footer .infos p{
+                font-size:12px;
+            }
+        }
+        @media screen and (max-width:300px) {
+            footer .infos a {
+                font-size:11px;
+            }
+            footer .infos #span {
+                font-size:11px;
+            }
+            footer .infos i {
+                font-size:11px;
+            }
+            footer .infos p{
+                font-size:11px;
+            }
+        }
+        @media screen and (max-width:1000px) {
+            footer form {
+                max-width:80%;
+            }
+        }
+        @media screen and (max-width:600px) {
+            footer .feedback-input{
+                font-size:12px;
+            }
+            footer form {
+                max-width:85%;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="scrollToTop">
+        <img src="images/SeekPng.com_top-arrow-png_2557821.png">
+    </div>
     <header>
         <div class="image">
             <img src="images/SV logo_No Background.png">
@@ -389,16 +512,48 @@
     </main>
     <footer  id="contact">
         <div class="title">
-            <h2 style="color:white" id="contactFormTitle">Leave your message here</h2>
+            <h2 style="color:white" id="contactFormTitle">Get in touch!</h2>
         </div>
-        <div class="contain2">
-            <form action="https://formsubmit.co/03641ff366716fa614bb2bbd7e9fb7cf" method="POST" >
-                <input name="Name" type="text" class="feedback-input" placeholder="Name" id="First Name" />
-                <input name="Phone Number" type="text" class="feedback-input" placeholder="Phone number" id="phoneNum"/>
-                <input name="Email" type="text" class="feedback-input" placeholder="Email" id="Email"/>
-                <textarea name="Message" class="feedback-input" placeholder="Your message" id="Message"></textarea>
-                <input type="submit" value="Send" id="Submit"/>
-            </form>
+        <div class="contain4">
+            <div class="contain2">
+                <form action="https://formsubmit.co/03641ff366716fa614bb2bbd7e9fb7cf" method="POST" >
+                    <input name="Name" type="text" class="feedback-input" placeholder="Name" id="First Name" />
+                    <input name="Phone Number" type="text" class="feedback-input" placeholder="Phone number" id="phoneNum"/>
+                    <input name="Email" type="text" class="feedback-input" placeholder="Email" id="Email"/>
+                    <textarea name="Message" class="feedback-input" placeholder="Your message" id="Message"></textarea>
+                    <input type="submit" value="Send" id="Submit"/>
+                </form>
+            </div>
+            <div class="contain3">
+                <div class="infos">
+                    <div class="locate">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span id="span">Location</span>
+                        <br>
+                        <a>Level 1, Suite 49, Orchid Plaza, 58 Lake St CAIRNS QLD 4870</a>
+                        <br>
+                        <a>PO Box 6678 CAIRNS, QLD 4870</a>
+                    </div>
+                    <div class="phoneNumber">
+                        <i class="fa-solid fa-phone"></i>
+                        <span id="span">Phone number</span>
+                        <br>
+                        <a href="tel:0423040573" id="Phone">Phone: 0423040573</a>
+                    </div>
+                    <div class="emailAddress">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span id="span">Email</span>
+                        <br>
+                        <a href="mailto:steven@svass.com.au">Email: steven@svass.com.au</a>
+                    </div>
+                    <div class="time">
+                        <i class="fa-solid fa-business-time"></i>
+                        <span id="span">Time</span>
+                        <br>
+                        <p style="color:white">MON-SAT : 9AM - 5PM</p>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </footer>
@@ -454,6 +609,10 @@
         let toggle=document.querySelector(".toggle");
         let before=window.getComputedStyle(toggle, "before");
         let after=window.getComputedStyle(toggle, "after");
+        let scroll= document.querySelector(".scrollToTop img");
+        scroll.addEventListener("click", function(){
+            window.scrollTo(0,0);
+        })
         toogle.addEventListener('click', function(){
             toogle.classList.toggle("active");
             option.classList.toggle('active');
