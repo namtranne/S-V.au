@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            height:100vh;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            font-size:20px;
+        }
+        .slider {
+            height: 60%;
+            width:80%;
+            border:1px solid black;
+            overflow:scroll;
+            padding: 0px 80px;
+            position:relative;
+
+        }
+        .slider img {
+            width:100px;
+            height:100px;
+            
+        }
+        .slide1, .slide2, .slide3 {
+            display:none;
+        }
+        .slide1.active {
+            height: 100%;
+            width: 100%;
+            display:flex;
+            align-items:center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .slide2.active {
+            height: 100%;
+            width: 100%;
+            display:flex;
+            align-items:center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .slide3.active {
+            height: 100%;
+            width: 100%;
+            display:flex;
+            align-items:center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .slider .prev img {
+            width:20px; height:20px;
+        }
+        .slider .next img {
+            width:20px; height:20px;
+        }
+        .slider .prev {
+            position:absolute;
+            top:50%;
+            left:10px;
+        }
+        .slider .next {
+            position:absolute;
+            top:50%;
+            right:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="next"><img src="/images/next.png" alt=""></div>
+        <div class="prev"><img src="/images/prev.png" alt=""></div>
+        <div class="slide1">
+            <h3 id="head1">What are we?</h3>
+            <p id="line1">S&V Associates is a registered tax agent and public accountant in Cairns, QLD</p>
+            <div class="glass">
+                <img src="/images/glass2.jpg" alt="" id="glass">
+                <img src="/images/glass1.jpg" alt="" id="glass">
+            </div>
+        </div>
+        <div class="slide2">
+            <h3 id="head2">What can we do?</h3>
+                <p id="line2">We offer professional solutions to address your tax matters if you are:</p>
+                <p id="line3">-	Business Owners who need the right business structure and tax planning to minimise tax legally.</p>
+                <p id="line4">-	Business Owners who need someone who takes care of their paperwork and weekly payroll smoothly like a professional bookkeeper.</p>
+                <p id="line5">-	Employees of cafés, restaurants, warehouses, farms, offices, etc who wants to get maximum tax refunds and good planning before year end to save money in super to use for their first home deposit but get massive extra tax refunds in their tax returns from this.</p>
+                <p id="line6">-	Working Holiday Visa Holders 417 or 462 & Covid Visa 408 Holders who need someone to act on your behalf and tell the ATO that “I am foreigner but a resident for tax purpose and eligible for extra refunds.”</p>
+                <p id="line7">-	Student Visa Holders who may need supports to send Medicare a form to claim Medicare levy exemption to get extra tax refunds.</p>
+                <p id="line8">-	You don’t have time to visit a tax agent in person and would like to do your tax online?</p>
+                <p id="line9">Paperwork’s + Tax = HEADACHE. Let us replace 2nd side of the equation to SUCCESS, without the use of Panadol. We will let you get back to doing what you do best - running your business without worrying about your paperwork’s no more.</p>
+        </div>
+        <div class="slide3">
+            <h3 id="head3">Our founder</h3>
+            <p id="line10">Steven Ta has more than 10 years of experience helping clients maximise their tax position and unlock the value of their businesses. This industry experience allows us to develop tailored solutions to meet each client’s unique needs.</p>
+            <p id="line11">For more information on what we can offer and how our accounting experience can enhance your business, contact us today.</p>
+            <img src="/images/steven.jpg" id="steven">
+            <p>Steven and a little Timon</p>
+        </div>
+    </div>
+    <script>
+        let slide1=document.querySelector(".slide1");
+        let slide2=document.querySelector(".slide2");
+        let slide3=document.querySelector(".slide3");
+        let con=1;
+        setInterval(()=>{
+            if (con%3==1) {
+                slide1.classList.add("active");
+                slide2.classList.remove("active");
+                slide3.classList.remove("active");
+            } 
+            else if (con%3==2) {
+                slide1.classList.remove("active");
+                slide2.classList.add("active");
+                slide3.classList.remove("active");
+            }
+            else {
+                slide1.classList.remove("active");
+                slide2.classList.remove("active");
+                slide3.classList.add("active");
+            }
+            con+=1;
+        }, 1000);
+    </script>
+</body>
+</html>
