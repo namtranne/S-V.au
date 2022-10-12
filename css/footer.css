@@ -46,15 +46,7 @@ footer .contain2 {
         margin: auto auto;
         position:absolute;
 }
-footer .contain2:before {
-    content:"";
-    position:absolute;
-    top:0;
-    right:0;
-    height: 80%;
-    width:2px;
-    background:white;
-}
+
 .bottom {
 
     height:180px;

@@ -343,13 +343,79 @@
                 max-width:80%;
             }
         }
-        @media screen and (max-width:600px) {
+        
+        @media screen and (max-height:780px) {
+            footer .contain4 .line {
+                height:92%;
+            }
+        }
+        @media screen and (max-height:680px) {
+            footer .feedback-input {
+                line-height:12px;
+            }
+        }
+        @media screen and (max-height:633px) {
             footer .feedback-input{
+                line-height:7px;
+            }
+        }
+        @media screen and (max-height:620px) {
+            footer .feedback-input{
+                font-size:10px;
+                
+            }
+        }
+        @media screen and (max-height:612px) {
+            footer .feedback-input{
+                font-size:9px;
+                line-height:5px;
+            }
+        }
+        .infos .locate, .infos .phoneNumber, .infos .emailAddress, .infos .time {
+            margin-bottom:10px;
+        }
+        .infos .locate a, .infos .phoneNumber a, .infos .emailAddress a, .infos .time a{
+            font-size:19px;
+        }
+        .infos time span{
+            font-size:19px;
+        }
+        @media screen and (max-width:710px) {
+            .infos .locate a, .infos .phoneNumber a, .infos .emailAddress a, .infos .time a{
+                font-size:17px;
+            }
+            .infos .time p{
+                font-size:17px;
+            }
+        }
+        @media screen and (max-width:600px) {
+            .infos .locate a, .infos .phoneNumber a, .infos .emailAddress a, .infos .time a{
+                font-size:14px;
+            }
+            .infos .time p{
+                font-size:14px;
+            }
+            .infos .locate, .infos .phoneNumber, .infos .emailAddress, .infos .time {
+                margin-bottom:8px;
+            }
+        }
+        @media screen and (max-width:470px) {
+            .infos .locate a, .infos .phoneNumber a, .infos .emailAddress a, .infos .time a{
                 font-size:12px;
             }
-            footer form {
-                max-width:85%;
+            .infos .time p{
+                font-size:12px;
             }
+            .infos .locate, .infos .phoneNumber, .infos .emailAddress, .infos .time {
+                margin-bottom:6px;
+            }
+        }
+        .contain4 .line {
+            position: absolute;
+            height:80%;
+            width:2px;
+            background:white;
+            left: 50%;
         }
     </style>
 </head>
@@ -515,6 +581,8 @@
             <h2 style="color:white" id="contactFormTitle">Get in touch!</h2>
         </div>
         <div class="contain4">
+            <div class="line">
+            </div>
             <div class="contain2">
                 <form action="https://formsubmit.co/03641ff366716fa614bb2bbd7e9fb7cf" method="POST" >
                     <input name="Name" type="text" class="feedback-input" placeholder="Name" id="First Name" />
@@ -530,9 +598,9 @@
                         <i class="fa-solid fa-location-dot"></i>
                         <span id="span">Location</span>
                         <br>
-                        <a>Level 1, Suite 49, Orchid Plaza, 58 Lake St CAIRNS QLD 4870</a>
+                        <a href="https://goo.gl/maps/AcmX6kafcr8zFU4r6">Level 1, Suite 49, Orchid Plaza, 58 Lake St CAIRNS QLD 4870</a>
                         <br>
-                        <a>PO Box 6678 CAIRNS, QLD 4870</a>
+                        <a >PO Box 6678 CAIRNS, QLD 4870</a>
                     </div>
                     <div class="phoneNumber">
                         <i class="fa-solid fa-phone"></i>
