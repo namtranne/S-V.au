@@ -358,7 +358,7 @@
         }
         @media screen and (max-height:633px) {
             footer .feedback-input{
-                line-height:7px;
+                line-height:10px;
             }
         }
         @media screen and (max-height:620px) {
@@ -368,9 +368,17 @@
             }
         }
         @media screen and (max-height:612px) {
+            footer form {
+                max-width:95%;
+            }
             footer .feedback-input{
                 font-size:9px;
-                line-height:5px;
+                line-height:9px;
+            }
+        }
+        @media screen and (max-width: 360px) {
+            footer .feedback-input{
+                font-size:11px;
             }
         }
         .infos .locate, .infos .phoneNumber, .infos .emailAddress, .infos .time {
@@ -378,6 +386,12 @@
         }
         .infos .locate a, .infos .phoneNumber a, .infos .emailAddress a, .infos .time a{
             font-size:19px;
+        }
+        .infos span {
+            font-size:20px;
+        }
+        .infos i {
+            font-size:20px;
         }
         .infos time span{
             font-size:19px;
@@ -388,6 +402,12 @@
             }
             .infos .time p{
                 font-size:17px;
+            }
+            .infos span {
+                font-size:18px;
+            }
+            .infos i {
+                font-size:18px;
             }
         }
         @media screen and (max-width:600px) {
@@ -400,6 +420,12 @@
             .infos .locate, .infos .phoneNumber, .infos .emailAddress, .infos .time {
                 margin-bottom:8px;
             }
+            .infos span {
+                font-size:15px;
+            }
+            .infos i {
+                font-size:15px;
+            }
         }
         @media screen and (max-width:470px) {
             .infos .locate a, .infos .phoneNumber a, .infos .emailAddress a, .infos .time a{
@@ -411,7 +437,14 @@
             .infos .locate, .infos .phoneNumber, .infos .emailAddress, .infos .time {
                 margin-bottom:6px;
             }
+            .infos span {
+                font-size:13px;
+            }
+            .infos i {
+                font-size:13px;
+            }
         }
+        
         .contain4 .line {
             position: absolute;
             height:80%;
@@ -744,7 +777,7 @@
                 <ul>
                     <li><h4 style="color:white" id="contactInfoTitle">Contact information:</h4></li>
                     <li> <a href="mailto:steven@svass.com.au">Email: steven@svass.com.au</a></li>
-                    <li><a href="tel:0423040573" id="Phone">Phone: 0423040573</a></li>
+                    <li><a href="tel:0423040573" id="Phone3">Phone: 0423040573</a></li>
                 </ul>
             </div>
             <div class="social">
@@ -830,6 +863,8 @@
             let head1=document.getElementById("head1");
             let head2=document.getElementById("head2");
             let head3=document.getElementById("head3");
+            let phone3=document.getElementById("Phone3");
+            let span=document.querySelectorAll("#span");
             if (input.checked) {
                 ab.innerHTML="Về chúng tôi";
                 faq.innerHTML="Hỏi đáp";
@@ -837,7 +872,7 @@
                 des1.innerHTML="Dịch vụ thuế cho cá nhân và doanh nghiệp hiện tại và tương lai";
                 des2.innerHTML="Sự thành công của bạn là nhiệm vụ của chúng tôi";
                 loc.innerHTML="Vị trí của chúng tôi";
-                formTitle.innerHTML=("Hãy để lại lời nhắn cho chúng tôi");
+                formTitle.innerHTML=("Liên lạc với chúng tôi nhé!");
                 name.placeholder=("Tên của bạn");
                 message.placeholder=("Lời nhắn");
                 submit.value=("Gửi");
@@ -860,6 +895,10 @@
                 head1.innerHTML="Chúng tôi là ai?";
                 head2.innerHTML="Những dịch vụ của chúng tôi";
                 head3.innerHTML="Nhà sáng lập";
+                phone3.innerHTML="Số điện thoại: 0423040573";
+                span[0].innerHTML="Địa điểm";
+                span[1].innerHTML="Số điện thoại";
+                span[3].innerHTML="Thời gian làm việc";
             }
             else {
                 ab.innerHTML="About Us";
@@ -868,7 +907,7 @@
                 des1.innerHTML="Your present and future tax and business services";
                 des2.innerHTML="Our mission is your success";
                 loc.innerHTML="Our location";
-                formTitle.innerHTML=("Leave your message here");
+                formTitle.innerHTML=("Get in touch!");
                 name.placeholder=("Your name");
                 message.placeholder=("Your message");
                 submit.value=("Send");
@@ -891,6 +930,10 @@
                 head1.innerHTML="What are we?";
                 head2.innerHTML="What can we do?";
                 head3.innerHTML="Our founder";
+                phone3.innerHTML="Phone: 0423040573";
+                span[0].innerHTML="Location";
+                span[1].innerHTML="Phone number";
+                span[3].innerHTML="Time";
             }
         });
         window.addEventListener("scroll", function(event){
